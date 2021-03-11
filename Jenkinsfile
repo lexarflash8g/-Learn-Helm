@@ -68,13 +68,13 @@ agent { label "chart-testing-agent" }
 			    // Add and commit the changes
 		 	    sh "git add --all"
 			    sh "git commit -m 'pushing charts from branch ${env.BRANCH_NAME}'"
-			    withCredentials([usernameColonPassword(credentialsId: 'github-auth', variable: 'USERPASS')]) {
+			  #  withCredentials([usernameColonPassword(credentialsId: 'github-auth', variable: 'USERPASS')]) {
 			        script {
 
 				    // Inject GitHub auth and push to the repo where charts are being served
-				    def authRepo = env.GITHUB_PAGES_REPO_URL.replace("://", "://${USERPASS}@")
-				    sh "git push ${authRepo} ${baseBranch}"
-			        }
+				    #def authRepo = env.GITHUB_PAGES_REPO_URL.replace("://", "://${USERPASS}@")
+				    sh "git push master"
+			     #   }
 			    }
                         }
                     }
