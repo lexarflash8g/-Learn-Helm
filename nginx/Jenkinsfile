@@ -1,8 +1,9 @@
 pipeline {
     agent { label "chart-testing-agent" }
-    environment {
-     GITHUB_PAGES_SITE_URL = "https://github.com/lexarflash8g/Learn-Helm-Chart-Repository/stable" 
-     BRANCH_NAME = "master"
+   // environment {
+  //   GITHUB_PAGES_SITE_URL = "https://github.com/lexarflash8g/Learn-Helm-Chart-Repository/stable" 
+   //  BRANCH_NAME = "master"
+  //  }
     options {
         buildDiscarder(logRotator(numToKeepStr: '10'))
     }
