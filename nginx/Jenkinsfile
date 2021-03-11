@@ -1,7 +1,7 @@
 pipeline {
     agent { label "chart-testing-agent" }
     environment {
-     GITHUB_PAGES_SITE_URL = "https://github.com/lexarflash8g/Learn-Helm-Chart-Repository/stable" 
+     GITHUB_PAGES_SITE_URL = "https://github.com/lexarflash8g/Learn-Helm-Chart-Repository/staging" 
      BRANCH_NAME = "master"
     }
     options {
