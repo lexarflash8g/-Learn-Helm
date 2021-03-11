@@ -72,7 +72,7 @@ agent { label "chart-testing-agent" }
 			        script {
 
 				    // Inject GitHub auth and push to the repo where charts are being served
-				    #def authRepo = env.GITHUB_PAGES_REPO_URL.replace("://", "://${USERPASS}@")
+				   // def authRepo = env.GITHUB_PAGES_REPO_URL.replace("://", "://${USERPASS}@")
 				    sh "git push master"
 			        }
 			    //}
