@@ -73,7 +73,7 @@ agent { label "chart-testing-agent" }
 
 				    // Inject GitHub auth and push to the repo where charts are being served
 				   // def authRepo = env.GITHUB_PAGES_REPO_URL.replace("://", "://${USERPASS}@")
-				    sh "git push https://${USERNAME}:{$PASSWORD}@github.com/lexarflash8g/Learn-Helm-Chart-Repository.git"
+				    sh "git push https://$USERNAME:$PASSWORD@github.com/lexarflash8g/Learn-Helm-Chart-Repository.git"
 			        }
 			    }
                         }
