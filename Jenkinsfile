@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+agent { label "chart-testing-agent" }
     options {
         buildDiscarder(logRotator(numToKeepStr: '10'))
     }
